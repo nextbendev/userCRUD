@@ -1,5 +1,3 @@
-const { environment } = require('@rails/webpacker')
-
 //  config/webpack/environment.js
 
 const { environment } = require('@rails/webpacker')

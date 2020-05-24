@@ -1,16 +1,13 @@
 class BlogsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @categories = Category.all
-
     cate = params[:cate]
-
     if !cate.nil?
       @blogs = Blog.where(:category_id => cate)
     else
     @blogs = Blog.all
     end
-
-
   end
 
   def show
@@ -47,7 +44,6 @@ class BlogsController < ApplicationController
 
   end
 
-
   def destroy
     @blog =Blog.find(params[:id])
 
@@ -57,10 +53,8 @@ class BlogsController < ApplicationController
 
   private
 
-
   def blog_params
     params.require(:blog).permit(:title, :content, :category_id)
   end
-
-
+  
 end

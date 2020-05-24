@@ -15,7 +15,48 @@
  *= require_self
  */
 
- .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
+.fakeimg {
+  height: 200px;
+  background: #aaa;
+}
+body {
+  background-color: #1a1a1d;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+nav {
+  background-color: #174d17;
+}
+
+.gastrogreen {
+  color: #273423;
+}
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.gastroblue {
+  color: blue;
+}
